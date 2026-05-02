@@ -1,0 +1,12 @@
+{
+  "name": "@balancehogar/typescript-config",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Configuraciones base de TypeScript compartidas para todo el monorepo",
+  "files": [
+    "base.json",
+    "library.json",
+    "react-native.json",
+    "nest.json"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "name": "@balancehogar/schemas",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Schemas de validación con Zod compartidos entre mobile y api (single source of truth)",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "source": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./auth": {
+      "types": "./dist/auth/index.d.ts",
+      "default": "./dist/auth/index.js"
+    },
+    "./expense": {
+      "types": "./dist/expense/index.d.ts",
+      "default": "./dist/expense/index.js"
+    },
+    "./member": {
+      "types": "./dist/member/index.d.ts",
+      "default": "./dist/member/index.js"
+    },
+    "./residence": {
+      "types": "./dist/residence/index.d.ts",
+      "default": "./dist/residence/index.js"
+    },
+    "./notification": {
+      "types": "./dist/notification/index.d.ts",
+      "default": "./dist/notification/index.js"
+    },
+    "./primitives": {
+      "types": "./dist/primitives/index.d.ts",
+      "default": "./dist/primitives/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "type-check": "tsc --noEmit",
+    "clean": "rimraf dist .turbo"
+  },
+  "dependencies": {
+    "@balancehogar/types": "workspace:*",
+    "@balancehogar/constants": "workspace:*",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@balancehogar/typescript-config": "workspace:*",
+    "typescript": "^5.6.3",
+    "rimraf": "^6.0.1"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "extends": ["expo/tsconfig.base", "@balancehogar/typescript-config/react-native.json"],
+  "compilerOptions": {
+    "jsx": "react-native",
+    "moduleResolution": "bundler",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/app/*": ["./app/*"],
+      "@/components/*": ["./components/*"],
+      "@/hooks/*": ["./hooks/*"],
+      "@/utils/*": ["./utils/*"],
+      "@/context/*": ["./context/*"],
+      "@/types/*": ["./types/*"],
+      "@/constants/*": ["./constants/*"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.ts", "expo-env.d.ts"],
+  "exclude": ["node_modules", ".expo", "android", "ios", "dist"]
+}

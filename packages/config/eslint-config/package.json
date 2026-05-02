@@ -1,0 +1,13 @@
+{
+  "name": "@balancehogar/eslint-config",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Configuraciones de ESLint compartidas (base, react-native, nest)",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "base.js",
+    "react-native.js",
+    "nest.js"
+  ]
+}

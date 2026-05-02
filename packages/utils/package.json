@@ -1,0 +1,46 @@
+{
+  "name": "@balancehogar/utils",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Utilidades puras de BalanceHogar (formato de dinero, fechas, splits de gastos, etc.)",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "source": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./currency": {
+      "types": "./dist/currency/index.d.ts",
+      "default": "./dist/currency/index.js"
+    },
+    "./date": {
+      "types": "./dist/date/index.d.ts",
+      "default": "./dist/date/index.js"
+    },
+    "./expenses": {
+      "types": "./dist/expenses/index.d.ts",
+      "default": "./dist/expenses/index.js"
+    },
+    "./strings": {
+      "types": "./dist/strings/index.d.ts",
+      "default": "./dist/strings/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "type-check": "tsc --noEmit",
+    "test": "echo \"sin tests aún\" && exit 0",
+    "clean": "rimraf dist .turbo"
+  },
+  "dependencies": {
+    "@balancehogar/types": "workspace:*",
+    "@balancehogar/constants": "workspace:*"
+  },
+  "devDependencies": {
+    "@balancehogar/typescript-config": "workspace:*",
+    "typescript": "^5.6.3",
+    "rimraf": "^6.0.1"
+  }
+}

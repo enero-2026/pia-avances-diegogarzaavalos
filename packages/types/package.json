@@ -1,0 +1,33 @@
+{
+  "name": "@balancehogar/types",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Tipos TypeScript del dominio de BalanceHogar (User, Member, Expense, Residence, etc.) compartidos entre mobile y api",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "source": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./domain": {
+      "types": "./dist/domain/index.d.ts",
+      "default": "./dist/domain/index.js"
+    },
+    "./api": {
+      "types": "./dist/api/index.d.ts",
+      "default": "./dist/api/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "type-check": "tsc --noEmit",
+    "clean": "rimraf dist .turbo"
+  },
+  "devDependencies": {
+    "@balancehogar/typescript-config": "workspace:*",
+    "typescript": "^5.6.3",
+    "rimraf": "^6.0.1"
+  }
+}

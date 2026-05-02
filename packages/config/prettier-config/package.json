@@ -1,0 +1,10 @@
+{
+  "name": "@balancehogar/prettier-config",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Configuración de Prettier compartida del monorepo",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ]
+}

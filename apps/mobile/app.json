@@ -1,0 +1,65 @@
+{
+  "expo": {
+    "name": "BalanceHogar",
+    "slug": "balancehogar",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "scheme": "balancehogar",
+    "userInterfaceStyle": "automatic",
+    "icon": "./assets/images/icon.png",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.balancehogar.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Necesitamos la cámara para que puedas adjuntar fotos de tickets a tus gastos.",
+        "NSPhotoLibraryUsageDescription": "Necesitamos acceso a tus fotos para que puedas adjuntar comprobantes a tus gastos."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#0F172A"
+      },
+      "package": "com.balancehogar.app"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#0F172A"
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "color": "#3B82F6"
+        }
+      ],
+      "expo-secure-store",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Permite a BalanceHogar usar la cámara para que puedas tomar fotos de tickets."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Permite a BalanceHogar acceder a tus fotos para que puedas adjuntar comprobantes a tus gastos."
+        }
+      ],
+      "expo-font"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    },
+    "extra": {
+      "router": {}
+    }
+  }
+}
